@@ -41,19 +41,19 @@ fun renderFailure(id: String, sourceUrl: String, query: Query, failure: Throwabl
 
     when (failure) {
         is TranslationNotFoundException -> {
-            container.p(classes = "alert alert-warning") {
+            container.p(classes = "translation-failure alert alert-warning") {
                 +"No result found for \"${query.getText()}\""
             }
         }
 
         is TranslationParsingFailureException -> {
-            container.p(classes = "alert alert-danger") {
+            container.p(classes = "translation-failure alert alert-danger") {
                 +"Parse query html failed \"${query.getText()}\""
             }
         }
 
         else -> {
-            container.p(classes = "alert alert-warning") {
+            container.p(classes = "translation-failure alert alert-warning") {
                 +(failure.message ?: "Error when calling service")
             }
         }
