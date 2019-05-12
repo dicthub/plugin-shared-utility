@@ -34,7 +34,7 @@ fun renderBugReport(container: TagConsumer<StringBuilder>, id: String, query: Qu
 }
 
 fun renderFailure(id: String, sourceUrl: String, query: Query, failure: Throwable): String {
-    console.error("Failure from $id on ${query}", failure)
+    console.error("Failure from $id on $query", failure)
 
     val stringBuilder = StringBuilder()
     val container = stringBuilder.appendHTML()

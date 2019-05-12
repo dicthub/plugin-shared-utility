@@ -8,8 +8,8 @@ import kotlin.js.json
 typealias Query = Json
 
 fun Query.getText(): String = attribute("text")
-fun Query.getFrom(): String = attribute<String>("from")
-fun Query.getTo(): String = attribute<String>("to")
+fun Query.getFrom(): String = attribute("from")
+fun Query.getTo(): String = attribute("to")
 
 fun createQuery(text: String, from: String, to: String) = json(
         "text" to text,

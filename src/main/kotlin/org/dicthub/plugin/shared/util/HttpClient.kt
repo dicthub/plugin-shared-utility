@@ -16,14 +16,14 @@ object AjaxHttpClient : HttpAsyncClient {
 
         return Promise { resolve, reject ->
             val xhr = XMLHttpRequest()
-            xhr.addEventListener("load", { _ ->
+            xhr.addEventListener("load", {
                 if (xhr.status.toInt() == 200) {
                     resolve(xhr.responseText)
                 } else {
                     reject(RuntimeException("${xhr.status} ${xhr.statusText} when getting $url"))
                 }
             })
-            xhr.addEventListener("error", { _ ->
+            xhr.addEventListener("error", {
                 reject(RuntimeException("Failed to load $url."))
             })
             xhr.open("GET", url)
@@ -37,14 +37,14 @@ object AjaxHttpClient : HttpAsyncClient {
         return Promise { resolve, reject ->
 
             val xhr = XMLHttpRequest()
-            xhr.addEventListener("load", { _ ->
+            xhr.addEventListener("load", {
                 if (xhr.status.toInt() == 200) {
                     resolve(xhr.responseText)
                 } else {
                     reject(RuntimeException("${xhr.status} ${xhr.statusText} when posting $url"))
                 }
             })
-            xhr.addEventListener("error", { _ ->
+            xhr.addEventListener("error", {
                 reject(RuntimeException("Failed to load $url."))
             })
             xhr.open("POST", url)
