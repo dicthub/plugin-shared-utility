@@ -21,7 +21,7 @@ fun renderBugReport(container: TagConsumer<StringBuilder>, id: String, query: Qu
 
     val bugTitle = "$id - [${query.getText()}]/${query.getFrom()}/${query.getTo()}"
     val bugContent = "message: ${exception.message}, cause: ```${exception.cause}```"
-    val bugUrl = "https://github.com/willings/DictHub/issues/new?title=$bugTitle&body=$bugContent"
+    val bugUrl = "https://github.com/dicthub/DictHubExtension/issues/new?title=$bugTitle&body=$bugContent"
     container.div(classes = "translation-report-bug") {
         small {
             +"Report issue: "
