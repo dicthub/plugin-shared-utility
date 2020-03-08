@@ -1,5 +1,5 @@
-[ ![Kotlin](https://img.shields.io/badge/Kotlin-1.3.20-green.svg) ](https://kotlinlang.org/)
-[![Build Status](https://travis-ci.org/dicthub/plugin-shared-utility.svg?branch=master)](https://travis-ci.org/dicthub/plugin-shared-utility) 
+[ ![Kotlin](https://img.shields.io/badge/Kotlin-1.3.70-green.svg) ](https://kotlinlang.org/)
+![Java CI with Gradle](https://github.com/dicthub/plugin-shared-utility/workflows/Java%20CI%20with%20Gradle/badge.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # plugin-shared-utility
